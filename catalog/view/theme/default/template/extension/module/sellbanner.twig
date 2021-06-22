@@ -1,0 +1,17 @@
+<div class="sellb">
+	<div class="container">
+	<div class="row">
+			{% for banner in banners %}
+				<div class="beffect col-sm-6 col-xs-12 selb">
+				  {% if banner.link %}
+				  	<a href="{{ banner.link }}">
+				  		<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />
+				  		<span class="hover"><span class="r1"></span><span class="r2"></span></span>
+				  	</a>
+				  {% else %}
+				  	<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />{% endif %}
+				</div>
+			  {% endfor %}
+			</div>
+			</div>
+</div>

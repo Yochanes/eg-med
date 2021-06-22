@@ -1,0 +1,68 @@
+<div class="homecategory">
+<div class="container">
+
+<h1 class="heading text-center"><span>{{ cheading_title }}</span></h1>
+            <div id="featured_category" >
+                <div class="row rless">
+                <div id="cat-img" class="owl-carousel owl-theme">
+                    {% for category in categories %}
+                        {% if category.category_id == category_id %}
+                            <div class="block-cat-wr col-xs-12 cless">
+                                <div class="categorybr">
+                                <a href="{{ category.href }}">
+                                {% if category.image_name %}
+                                    <img src="{{ category.image_name }}" class="img-responsive center-block" alt="">
+                                {% else %}
+                                    <img src="image/no_image.png" class="img-responsive center-block" alt="">
+                                {% endif %}
+                                <div class="catcontent">
+                                    <h2><span>{{ category.name }}</span></h2>
+                                    <h4>view all <svg width="18px" height="12px"><use xlink:href="#catarrow"></use></svg></h4>
+                                </div>
+                                </a>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="block-cat-wr col-xs-12 cless">
+                                <div class="categorybr">
+                                <a href="{{ category.href }}">
+                                {% if category.image_name %}
+                                   <img src="{{ category.image_name }}" class="img-responsive center-block" alt="">
+                                {% else %}
+                                    <img src="image/no_image.png" class="img-responsive center-block" alt="">
+                                {% endif %}
+                                </a>
+                                </div>
+                                <div class="catcontent">
+                                    <h2><span>{{ category.name }}</span></h2>
+                                    <!--  <h6 class="catepro">{{category.totalp}} {{catepro}}</h6>
+                                    <h4>shop now<svg width="18px" height="12px"><use xlink:href="#catarrow"></use></svg></h4> -->
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                     </div>
+                </div>
+            </div>
+    </div>
+</div>
+<script type="text/javascript">
+  (function($){
+    $("#cat-img").owlCarousel({
+    itemsCustom : [
+    [0, 1],
+    [320, 2],
+    [450, 2],
+    [576, 3],
+    [700, 4],
+    [1200, 5],
+    [1410, 5],
+    [1700, 5]
+    ],
+      autoPlay: false,
+      navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+      navigation : false,
+      pagination:false
+    });
+  }(jQuery));
+</script>

@@ -1,0 +1,23 @@
+<div class="bannerser container">
+	<div class="row">
+    {% for banner in banners %}
+    	<div class="sbnr">
+    	<div class="col-md-5 col-lg-5 col-sm-6 col-xs-12 beffect">
+	        {% if banner.link %}
+			    <a href="{{ banner.link }}">
+			    <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />
+			    </a>
+			    {% else %}
+			    <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive center-block" />
+		    {% endif %}
+		</div>
+		 <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12 ser-dsc">
+			  <span class="ser-title">{{ banner.description }}</span>
+		<a href="{{ banner.link }}" class="bnr-btn">Подробнее<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				  
+					</div>
+	    </div>
+    {% endfor %}
+    <div class="col-xs-12 be1"></div>
+</div>
+</div>

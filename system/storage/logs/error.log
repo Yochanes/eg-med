@@ -1,0 +1,5 @@
+2020-02-03 8:44:07 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'cl57903_medf'@'localhost' (using password: YES) in /home/c/cl57903/medfashion/public_html/system/library/db/mysqli.php on line 7
+2020-02-03 8:44:07 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/c/cl57903/medfashion/public_html/system/library/db/mysqli.php on line 10
+2020-02-03 8:44:07 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/c/cl57903/medfashion/public_html/system/library/db/mysqli.php on line 10
+2020-02-03 8:44:07 - PHP Notice:  Undefined variable: mysql in /home/c/cl57903/medfashion/public_html/install/controller/install/step_3.php on line 280
+2020-02-03 8:44:07 - PHP Notice:  Trying to get property of non-object in /home/c/cl57903/medfashion/public_html/install/controller/install/step_3.php on line 280

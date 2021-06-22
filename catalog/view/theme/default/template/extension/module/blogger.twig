@@ -1,0 +1,66 @@
+<div class="blog_webi container">
+        <h1 class="heading text-center"><span>{{ heading_title }}</span></h1>
+        <div class="box-content">
+            <div class="box-product row rless">
+                <div id="blog" class="owl-carousel owl-theme">
+                {% for blog in blogs %}
+                    <div class="product-block col-xs-12 cless">
+                     {#    {% if blog.image %}
+                            <div class="blog-left">
+                                <div class="webi-blog-image">
+                                    <img src="{{ blog.image }}" alt="{{ heading_title }}" title="{{ heading_title }}" class="img-responsive" />
+                                    <div class="blog-post-image-hover"> </div>
+                                    <div class="webi_post_hover">
+                                        <div class="blog-ic">
+                                        <a class="icon zoom" title="Click to view Full Image " href="{{ blog.image }}" data-lightbox="example-set"><i class="fa fa-search"></i></a>
+                                        <a class="icon readmore_link" title="all blog" href="{{ all_blogs }}"><i class="fa fa-link"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                                 
+                            </div>
+                        {% endif %} #}
+                        <div class="blog-right text-left">
+                             <div class="date-time">{{ blog.date_added }}</div>
+                            <h4><a href="{{ blog.href }}">{{ blog.title }}</a> </h4>
+                            <p>{{ blog.description }}</p>
+                                 {# <h5 class="comments">{{ blog.total_comments }} {{ entry_comment }}</h5>#}
+                                <div class="redmore">
+                                    <svg width="40px" height="40px"><use xlink:href="#catarrow"></use></svg>
+                            <a class="read_more" href="{{ blog.href }}">{{ text_read_more }} </a>
+                            </div>
+                               {# <div class="view-blog">
+                                    <div class="read-more">
+                                        <a href="{{ blog.href }}">
+                                            <i class="fa fa-link"></i>{{ text_read_more }}
+                                        </a>
+                                    </div>
+                                </div> #}
+
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+     </div>
+
+<script type="text/javascript">
+    (function($){
+    $("#blog").owlCarousel({
+    itemsCustom : [
+    [0, 1],
+    [600, 2],
+    [768, 2],
+    [992, 2],
+    [1200, 2],
+    [1410, 3]
+    ],
+      // autoPlay: 1000,
+    navigationText: ['<svg width="18px" height="18px"><use xlink:href="#larrow"></use></svg><span>PREV</span>', '<span>NEXT</span><svg width="18px" height="18px"><use xlink:href="#rarrow"></use></svg>'],
+    navigation: true,
+    pagination: false
+    });
+  }(jQuery));
+</script>

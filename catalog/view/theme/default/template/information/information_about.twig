@@ -1,0 +1,132 @@
+{{ header }}
+<div id="information-information" class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<div id="information-about" class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="h1_wr">
+        <h1 class="heading text-center">{{ heading_title }}</h1>
+        <div class="after_line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section class="about_img about_img_1">
+    <div class="about_img_item about_img_item_bg about_img_item_bg_1">
+
+    </div>
+    <div class="about_img_item about_img_item_right">
+{#      <h3>О бренде EG</h3>#}
+      <div class="quote_line"></div>
+      <quote>За 10 лет в профессии врача медицинской костюм из рабочей одежды <br>превратился в элемент базового гардероба.</quote>
+      <div class="quote_line"></div>
+
+      <div class="next_screen_btn screen_2">
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="about_img about_img_2" id="screen_2">
+    <div class="about_img_item about_img_item_left">
+      <h3>Ситуация, знакомая каждому врачу</h3>
+      <p>
+        Множество халатов и костюмов прошли со мной нелегкий путь! Одни мялись, другие садились после стирки, третьи теряли цвет и переставали держать форму, а у каких-то был неудачный крой. Отдельная история - одежда у которой расходились швы и отрывались пуговицы в неподходящий момент...
+        В каких-то моделях дизайнеры просто забыли про карманы, а для врача карман - целый мир, маленькая “Нарния, в которой прячутся ручки, заметки, “яблочные друзья” и многое другое!
+      </p>
+      <p>Найти медицинскую одежду в интернете? - Легко
+        Но какой она будет?
+        В ней нет стиля, а 99% ассортимента на рынке - шаблонные модели.
+      </p>
+      <p>Эта ситуация - моя «боль».</p>
+      <p>(Голдина Екатерина Александровна)</p>
+    </div>
+    <div class="about_img_item about_img_item_bg about_img_item_bg_2"></div>
+  </section>
+
+
+
+
+<section class="about_img about_img_3">
+  <div class="about_img_item about_img_item_bg about_img_item_bg_3"></div>
+  <div class="about_img_item about_img_item_right">
+    <h3>Не можешь найти хороший продукт - сделай его сам! </h3>
+    <p>Я решила принять этот “вызов”. Так на свет появился бренд EG. </p>
+    <b>И это вам не просто халат! </b>
+    <p>В наших изделиях практичность, стиль и качество неразделимо сочетаются друг с другом.
+      Это та одежда, в которой Вы будете леди даже в самый напряженный рабочий день!
+    </p>
+    <p>Каждая модель проходит у меня персональный тест-драйв:</p>
+    <p>Множественные стирки, глажки, автоклавирования, пилинги, физиологические и прочие жидкости. Если швы выдерживают глубокий шпагат, айфон не выпадает из кармана, а пуговицы не отрываются «вдруг», <b>только тогда эта модель поступает в продажу!</b></p>
+
+  </div>
+</section>
+
+
+
+<section class="about_img about_img_4">
+  <div class="about_img_item about_img_item_left">
+    <h3>Цвета и типы тканей</h3>
+    <p>Легкая, дышащая и до смешного мягкая, возможно это утверждение верно для облаков, а еще определенно подходит для нашей медицинской формы.</p>
+    <p>Каждый комплект сделан из авторской четырехкомпонентной стрейч ткани EG, разработанной нами в команде с опытными итальянскими мастерами по текстилю с учетом всех особенностей применения в медицинской сфере.</p>
+    <ul>
+      <li>Обладает антимикробными свойствами,</li>
+      <li>Устойчива к запахам и влаге,</li>
+      <li>Не мнется,</li>
+      <li>Дает свободу,</li>
+      <li>Не сковывает движений и гармонично садится по любой фигуре.</li>
+      <li>Сохраняет цвет, размер и будет выглядеть «как новая» после 350 стирок.</li>
+    </ul>
+  </div>
+  <div class="about_img_item about_img_item_bg about_img_item_bg_4"></div>
+</section>
+
+
+  <section class="about_img about_img_5">
+    <div class="about_img_item about_img_item_bg ">
+      {% if mobile %}
+        <video src="catalog/view/theme/default/video/video_2020-03-03_18-31-22.mp4" controls></video>
+      {% else %}
+        <video src="catalog/view/theme/default/video/video_2020-03-03_17-23-35.mp4" controls></video>
+      {% endif %}
+    </div>
+    <div class="about_img_item about_img_item_right">
+      <h3>О нас говорят</h3>
+      <div class="owl-carousel about_slider owl-theme">
+        <div class="item">Очень хорошая посадка</div>
+        <div class="item">Есть отстрочка, имитирующая стрелки и поэтому их не надо постоянно заглаживать</div>
+        <div class="item">Пациенты сказали, что это совсем не похоже на рабочую форму</div>
+        <div class="item">Были опасения, что при стирке может полинять яркая вставка на поясе, но все оказалось прекрасно, зря переживала</div>
+        <div class="item">Я такой красивый халат еще нигде не видела</div>
+        <div class="item">Изумительное качество</div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Закажите любое изделие в пункт выдачи СДЭК в любую точку РФ и Вы лично убедитесь во всем вышеперечисленном!</h3>
+        <div class="btn_group btn_group_center">
+          <a class="popup-with-form btn-primary btn big_btn" href="#popupmenu">В каталог</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{{ footer }}

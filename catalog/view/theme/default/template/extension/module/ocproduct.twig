@@ -1,0 +1,113 @@
+<div class="hometimer row">
+  <div class="container">
+    <div class="row">
+
+  <div class="col-xs-12">
+    <div class="timerpro">
+<h1 class="heading text-center"><span>{{ oc_title }}</span></h1>
+<div class="row rless"> 
+  <div id="count" class="owl-theme owl-carousel">
+  {% for product in products %}
+  <div class="product-layout col-xs-12 cless">
+    <div class="product-thumb transition">
+
+       <div class="image"><a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive center-block" /></a>
+
+         {% if product.price %}
+          {% if product.special %}
+               <span class="sale">{{ pro_sale }}</span>
+          {% endif %}
+      {% endif %}
+
+       {% if config_module.countdown %}<div id="Countdown{{ product.product_id }}" class="box-timer"></div> {% endif %}
+
+      </div>
+
+
+   {% if product.date_end %}
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#Countdown{{ product.product_id }}').countdown({
+                        until: new Date({{ product.date_end|date("Y") }}, {{ product.date_end|date("m") }}-1, {{ product.date_end|date("d") }}, {{ product.date_end|date("H") }}, {{ product.date_end|date("i") }}, {{ product.date_end|date("s") }}),
+                        labels: ['Years', 'Months', 'Weeks', 'Days', 'Hrs', 'Mins', 'Secs'],
+                        labels1: ['Year', 'Month', 'Week', 'Day', 'Hr', 'Min', 'Sec'],
+                    });
+                    //$('#Countdown<?php echo $product['product_id'];?>').countdown('pause');
+                });
+            </script>
+            {% endif %}
+
+
+
+            <div class="caption text-left">
+         <h4  class="protitle"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+
+        {% if product.price %}
+        <div class="price">
+          {% if not product.special %}
+          {{ product.price }}
+          {% else %}
+          <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+          {% endif %}
+         {#  {% if product.tax %}
+          <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
+          {% endif %} #}
+        </div>
+        {% endif %}
+
+         {# {% if product.rating %}
+          <div class="rating">
+            {% for i in 1..5 %}
+            {% if product.rating < i %}
+            <span class="fa fa-stack">
+              <i class="fa fa-star-o fa-stack-2x"></i>
+            </span>
+            {% else %}
+            <span class="fa fa-stack">
+              <i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i>
+            </span>
+            {% endif %}
+          {% endfor %}</div>{% else %}
+          <div class="rating">{% for i in 1..5 %}
+          <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+          {% endfor %}</div>
+        {% endif %} #}
+
+        
+        
+      </div>
+    
+
+            </div>
+    </div>
+  {% endfor %}
+
+
+  
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+   $('#count').owlCarousel({
+    centermode: true,
+    dot: false,
+    loop: true,
+    margin:10,
+    navigation : true,
+    navigationText: ['<svg width="18px" height="18px"><use xlink:href="#larrow"></use></svg><span>PREV</span>', '<span>NEXT</span><svg width="18px" height="18px"><use xlink:href="#rarrow"></use></svg>'],
+    pagination: false,
+    itemsCustom : [
+    [0, 1],
+    [300, 1],
+    [480, 2],
+    [767, 3],
+    [900, 3],
+    [1200, 4],
+    [1410, 4]
+    ]
+});
+</script>

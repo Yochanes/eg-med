@@ -1,0 +1,17 @@
+{% if categories %}
+<div class="container">
+<nav id="menupopup">
+        <div class="navpopup">
+            {% set i = 1 %}
+
+            {% for category in categories %}
+                <a href="{{ category.href }}" data-column="{{ i }}" >
+                    <span>{{ category.name }}</span>
+                </a>
+            {% set i = i + 1 %}
+            {% endfor %}
+
+        </div>
+</nav>
+</div>
+{% endif %}
